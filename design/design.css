@@ -1,0 +1,279 @@
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Grey:  hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: Epilogue;
+    src: url(../fonts/static/Epilogue-Regular.ttf);
+}
+
+@font-face {
+    font-family: Epilogue-Bold;
+    src: url(../fonts/static/Epilogue-Bold.ttf);
+}
+
+@font-face {
+    font-family: Epilogue-Extra-Bold;
+    src: url(../fonts/static/Epilogue-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Epilogue-Light;
+    src: url(../fonts/static/Epilogue-Light.ttf);
+}
+
+body {
+    font-family: Epilogue;
+    font-size: 18px;
+    background-color: var(--Almost-White);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ********** Header ********** */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.features, .company {
+    height: auto;
+}
+
+#features, #company {
+    margin-top: -3px;
+}
+
+#logo {
+    margin-right: 2rem;
+    max-height: 30px;
+    margin-top: 0.250rem;
+}
+
+.linksLeft, .linksRight {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.linksLeft div, .linksRight div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    width: 200px;
+    /* height: 30px; */ height: auto;
+    color: var(--Medium-Grey);
+    border: 2px solid var(--Almost-White);
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+.linksLeft div p:hover, .linksRight div p:hover {
+    font-weight: bold;
+}
+
+/* ********** Menus ********** */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.features, .company {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.arrowUp {
+    display: none;
+}
+
+#companyMenu, #featuresMenu {
+    display: none;
+}
+
+/* ********** Main ********** */
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 75px;
+    font-family: Epilogue-Extra-Bold;
+}
+
+main p {
+    color: var(--Medium-Grey);
+}
+
+.mainLeft {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem;
+}
+
+.mainLeft p {
+    line-height: 1.5rem;
+}
+
+#txt {
+    color: var(--Almost-White);
+}
+
+#learnMore {
+    width: 175px;
+    height: 40px;
+    background-color: var(--Almost-Black);
+    border: 2px solid var(--Almost-Black);
+    border-radius: 10px;
+    transform: translateY(-35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+#learnMore:hover {
+    border: 2px solid var(--Almost-Black);
+    background-color: var(--Almost-White);
+    #txt {
+        color: var(--Almost-Black);
+    }
+}
+
+#img {
+    width: calc(960px / 2);
+    height: calc(1280px / 2);
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* ********** Attribution ********** */
+.attribution, .attribution a {
+    font-size: 12px;
+    color: var(--Almost-Black);
+    font-family: Epilogue-Bold;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.attribution a {
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: orangered;
+}
+
+@media (min-width: 350px) and (max-width: 750px) {
+    
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    #logo {
+        width: 50px;
+        height: auto;
+        margin-top: 0.5rem;
+        margin-right: -0.2rem;
+    }
+
+    #img {
+        width: calc(960px / 3);
+        height: calc(1280px / 3);
+        margin-top: 3.5rem;
+    }
+
+    .linksLeft, .linksRight {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .linksLeft div, .linksRight div {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainLeft {
+        width: 100%;
+        align-items: center;
+    }
+
+    #learnMore {
+        width: 150px;
+        height: 35px;
+    }
+
+    .images {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .attribution {
+        font-size: 10px;
+    }
+}
