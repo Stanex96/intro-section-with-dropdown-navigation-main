@@ -15,7 +15,7 @@ features.addEventListener('click', () => {
     if (featuresMenu.style.display === 'none' || featuresMenu.style.display === '') {
         featuresMenu.style.display      = 'flex';
         featuresMenu.style.position     = 'absolute';
-        featuresMenu.style.transform    = 'translateY(65%)';
+        featuresMenu.style.transform    = 'translateY(61%)';
         firstArrowDown.style.display    = 'none';
         firstArrowUp.style.display      = 'inline';
     } else {
